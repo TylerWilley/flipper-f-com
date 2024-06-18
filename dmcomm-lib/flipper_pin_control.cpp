@@ -9,7 +9,7 @@ FComOutput::FComOutput(const GpioPin* pin_out) :
 }
 
 FComOutput::~FComOutput() {
-    
+    furi_hal_gpio_init(pin_out_, GpioModeAnalog, GpioPullNo, GpioSpeedLow);
 }
 
 void FComOutput::begin() {
@@ -36,6 +36,7 @@ FComInput::FComInput(const GpioPin* pin_in) : pin_in_(pin_in) {
 }
 
 FComInput::~FComInput() {
+    furi_hal_gpio_init(pin_in_, GpioModeAnalog, GpioPullNo, GpioSpeedLow);
 }
 
 void FComInput::begin() {
