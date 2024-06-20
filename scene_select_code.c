@@ -49,7 +49,6 @@ void fcom_select_code_scene_on_enter(void* context) {
 
     file_browser_set_callback(app->file_browser, file_browser_callback, app);
 
-    furi_string_printf(app->file_path, "%s", APP_DIRECTORY_PATH);
     file_browser_start(app->file_browser, app->file_path);
 
     view_dispatcher_switch_to_view(app->view_dispatcher, FcomFileSelectView);

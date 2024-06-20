@@ -27,6 +27,10 @@ App* app_alloc() {
     app->dialog_text = furi_string_alloc();
     app->text_input = text_input_alloc();
     app->file_path = furi_string_alloc();
+
+    // Initialize to our root app directory
+    furi_string_printf(app->file_path, "%s", APP_DIRECTORY_PATH);
+
     app->file_browser = file_browser_alloc(app->file_path);
     app->text_box = text_box_alloc();
     app->text_box_store = furi_string_alloc();
