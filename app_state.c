@@ -39,7 +39,7 @@ App* app_alloc() {
     app->dmcomm_input_stream = furi_stream_buffer_alloc(256, 1);
     app->dmcomm_output_stream = furi_stream_buffer_alloc(256, 1);
 
-    file_browser_configure(app->file_browser, "*", NULL, true, false, &I_badusb_10px, true);
+    file_browser_configure(app->file_browser, "digirom", NULL, true, false, &I_botamon_10px, true);
 
     view_dispatcher_add_view(
         app->view_dispatcher, FcomMainMenuView, submenu_get_view(app->submenu));
