@@ -33,7 +33,8 @@ void save_text_input_callback(void* context) {
     FlipperFormat* fff_file = flipper_format_file_alloc(app->storage);
     FuriString* path = furi_string_alloc();
     
-    furi_string_printf(path, "%s/%s",APP_DIRECTORY_PATH, app->state->file_name_tmp);
+    // Add the .digirom extension so it will show up in the file picker
+    furi_string_printf(path, "%s/%s.digirom",APP_DIRECTORY_PATH, app->state->file_name_tmp);
 
     const char* path_cstr = furi_string_get_cstr(path);
 

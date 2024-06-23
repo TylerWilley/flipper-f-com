@@ -3,6 +3,7 @@
 Shut down GPIO when exiting app
 File browser now returns to the same location instead of resetting to application root
 Set up for publishing on flipper app store
+Add file browser icon and require .digirom extension for files to appear
 
 ## v1.3
 
